@@ -2,7 +2,7 @@
 
 By defining all of your jobs and views in a DSL file or a group of DSL files you can quickly recover everything, in the event of a disaster. The DSL uses Groovy, which is based on Java.  
 
-#Installing the Seed Plugin 
+# Installing the Seed Plugin 
 
 1. From the top menu, navigate to Jenkins > Manage Jenkins > Manage Plugins. 
 2. Click the Available tab on the Plugin Manager screen. 
