@@ -2,13 +2,13 @@
  * create Jenkins job to Visible the VRApp Database Schema creation and DB refresh Trigger
  *
  */
-def LicenseFolder = "EPMC-VRAPP-FEATURE"
-def currentEnv = "epmc-dev-1"
+def LicenseFolder = "DEMO-JMETER"
+idef currentEnv = "DB-Schema-Refresh"
 boolean disabledMail = true
-def jobName = LicenseFolder+"/Database-Create-"+currentEnv
-def lockResourceName = currentEnv+"-EPMC-VRAPP-FEATURE"
-//def automationPodLabel = "vulnerability-remediation-uat-"+currentEnv
-//def authToken1 = "b04ae1df4846b68"
+def jobName = LicenseFolder+"/MySql-"+currentEnv
+def lockResourceName = currentEnv+"-DEMO-JMETER"
+//def automationPodLabel = "SlaveMachineName-"+currentEnv
+//def authToken1 = "SlaveMchineToken"
 def suiteName = 'VRApp DB schema create or refresh'
 def SQL_SCRIPT = "DB_SCHEMA.SQL"
 
@@ -19,8 +19,8 @@ freeStyleJob(jobName){
     lockableResources(lockResourceName)
     //-- Choose CA Customer Data File and GroovyScript to execute the table update
     parameters {
-        fileParam('DB_SCHEMA.SQL','Please upload databse.sql to create/Refresh datbase schema VRAPP.SQL -https://stash.ges.symantec.com/projects/EPMC/repos/vulnerability-remediation-database/browse/vulnerability-remediation-database/vrapp.sql or CATALOG.SQL - https://stash.ges.symantec.com/projects/EPMC/repos/vulnerability-catalog-service/browse/vulnerability-catalog-service-database/catalog.sql')
-        stringParam('ENDPOINT_HOST_URL','localhost','RDS ENDPOINT URL-WRITER')
+        fileParam('DB_SCHEMA.SQL','Please upload databse.sql to create/Refresh datbase schema DB_SCHEMA_NAME')
+        stringParam('ENDPOINT_HOST_URL','localhost','Database Hostname or URL')
 	stringParam('DB_PASSWORD','abc@xyz','DB PASSWORD')
     }
 //    label(automationPodLabel)
