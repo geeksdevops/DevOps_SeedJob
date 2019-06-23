@@ -3,7 +3,7 @@
  *
  */
 def LicenseFolder = "DEMO-JMETER"
-def currentEnv = "DB-Schema-Refresh"
+def currentEnv = "DB-Refresh"
 boolean disabledMail = true
 def jobName = LicenseFolder+"/MySql-"+currentEnv
 def lockResourceName = currentEnv+"-DEMO-JMETER"
