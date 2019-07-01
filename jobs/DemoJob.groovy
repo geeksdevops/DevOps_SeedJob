@@ -3,7 +3,7 @@
  *
  */
 def SeedFolder = "AUTO-SEED-JOBS"
-def currentEnv = ""
+def currentEnv = "Demo-CustomerJobs"
 boolean disabledMail = true
 def jobName = SeedFolder+"/"+currentEnv
 def lockResourceName = currentEnv+"-AUTO-SEED-JOBS"
