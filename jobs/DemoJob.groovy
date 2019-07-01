@@ -2,10 +2,10 @@
  * Seed Job to create Sample Demo Jobs
  *
  */
-def LicenseFolder = "DEVOPS-AUTO-JOBS"
-def currentEnv = "SampleDemoJob"
+def SeedFolder = "AUTO-SEED-JOBS"
+def currentEnv = ""
 boolean disabledMail = true
-def jobName = LicenseFolder+"/Enable-On-"+currentEnv
+def jobName = SeedFolder+"/"+currentEnv
 def lockResourceName = currentEnv+"-DEVOPS-AUTO-JOBS"
 //def automationPodLabel = "SlaveMachineName-"+currentEnv
 //def authToken1 = "SlaveMachineToken"
@@ -13,7 +13,7 @@ def suiteName = 'ACTIVATED'
 def caCustomerFile = "CA_Customers.json"
 def groovyScript = "TableUpdate.py"
 
-folder(LicenseFolder)
+folder(SeedFolder)
 freeStyleJob(jobName){
 	 	//-- General ---
 		logRotator(2, 2, 1, -1)

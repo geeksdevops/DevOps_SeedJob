@@ -3,7 +3,7 @@ def ENV_LIST = [
   	'demo-pipeline-SeedJobs-2'
 ]
 
-def seedFolder = "Multi-Pipeline"
+def seedFolder = "DEMO-PIPELINE-JOBS"
 
 folder(seedFolder)
 ENV_LIST.each {
