@@ -1,9 +1,9 @@
 def ENV_LIST = [
-	'demo-pipeline-SeedJobs-1',
-  	'demo-pipeline-SeedJobs-2'
+	'demo-pipeline-1',
+  	'demo-pipeline-2'
 ]
 
-def seedFolder = "DEMO-PIPELINE-JOBS"
+def seedFolder = "PIPELINE-JOBS"
 
 folder(seedFolder)
 ENV_LIST.each {
