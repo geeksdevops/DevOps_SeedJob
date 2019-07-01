@@ -2,11 +2,11 @@
  * Seed Job to create Sample Demo Jobs
  *
  */
-def SeedFolder = "AUTO-SEED-JOBS"
+def SeedFolder = "SEED-JOBS"
 def currentEnv = "Demo-CustomerJobs"
 boolean disabledMail = true
 def jobName = SeedFolder+"/"+currentEnv
-def lockResourceName = currentEnv+"-AUTO-SEED-JOBS"
+def lockResourceName = currentEnv+"-SEED-JOBS"
 //def automationPodLabel = "SlaveMachineName-"+currentEnv
 //def authToken1 = "SlaveMachineToken"
 def suiteName = 'ACTIVATED'
